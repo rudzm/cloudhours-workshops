@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replica-set
+  labels:
+    app: myapp
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+        app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: my-app
+        image: rudzmic1/cloudhours-workshops:0.1
