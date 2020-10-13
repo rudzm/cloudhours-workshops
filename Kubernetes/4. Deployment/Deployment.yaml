@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: my-app-deployment
   labels:
-    app: my-app
+    app: MyApp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-app
+      app: MyApp
   template:
     metadata:
       labels:
-        app: my-app
+        app: MyApp
     spec:
       containers:
-      - name: my-app
+      - name: MyApp
         image: rudzmic1/cloudhours-workshops:0.1
         ports:
         - containerPort: 5000

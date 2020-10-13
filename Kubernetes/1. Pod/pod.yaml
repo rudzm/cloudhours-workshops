@@ -3,10 +3,10 @@ kind: Pod
 metadata:
   name: myapp-pod
   labels:
-    app: myapp
+    app: MyApp
 spec:
   containers:
-  - name: myapp
+  - name: MyApp
     image: rudzmic1/cloudhours-workshops:0.1
     ports:
     - containerPort: 5000
