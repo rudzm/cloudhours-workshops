@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-beer-app-deployment
+  labels:
+    app: my-beer-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-beer-app
+  template:
+    metadata:
+      labels:
+        app: my-beer-app
+    spec:
+      containers:
+      - name: my-beer-app
+        image: rudzmic1/cloudhours-workshops:0.1
+        ports:
+        - containerPort: 5000
