@@ -4,7 +4,7 @@ metadata:
   name: my-service-cluster-ip
 spec:
   selector:
-    app: MyApp
+    app: myapp
   ports:
     - protocol: TCP
       port: 5000

@@ -3,18 +3,18 @@ kind: ReplicaSet
 metadata:
   name: myapp-replica-set
   labels:
-    app: MyApp
+    app: myapp
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-        app: MyApp
+        app: myapp
   template:
     metadata:
       labels:
-        app: MyApp
+        app: myapp
     spec:
       containers:
-      - name: MyApp
+      - name: myapp
         image: rudzmic1/cloudhours-workshops:0.1

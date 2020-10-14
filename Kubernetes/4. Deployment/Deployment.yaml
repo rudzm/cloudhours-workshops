@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment
+  name: myapp-deployment
   labels:
-    app: MyApp
+    app: myapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: MyApp
+      app: myapp
   template:
     metadata:
       labels:
-        app: MyApp
+        app: myapp
     spec:
       containers:
-      - name: MyApp
+      - name: myapp
         image: rudzmic1/cloudhours-workshops:0.1
         ports:
         - containerPort: 5000

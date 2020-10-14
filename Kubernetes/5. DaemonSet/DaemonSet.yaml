@@ -3,17 +3,17 @@ kind: DaemonSet
 metadata:
   name: my-app-daemon-set
   labels:
-    app: MyApp
+    app: my-app-daemon-set
 spec:
   selector:
     matchLabels:
-      app: MyApp
+      app: my-app-daemon-set
   template:
     metadata:
       labels:
-        app: MyApp
+        app: my-app-daemon-set
     spec:
       containers:
-      - name: MyApp
+      - name: my-app
         image: rudzmic1/cloudhours-workshops:0.1
         
