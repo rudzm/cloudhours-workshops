@@ -19,3 +19,18 @@ spec:
         image: rudzmic1/cloudhours-workshops:0.1
         ports:
         - containerPort: 5000
+        livenessProbe:
+          httpGet:
+            path: /healtz
+            port: 5000
+            httpHeaders:
+            - name: Custom-Header
+              value: ok
+          initialDelaySeconds: 30
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /healtz
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 3
