@@ -2,7 +2,7 @@ gcloud beta container clusters create "cloudhours" `
 --zone "europe-west1-d" `
 --no-enable-basic-auth `
 --release-channel "rapid" `
---cluster-version "1.18.6-gke.4801" `
+--cluster-version "1.18.10-gke.1500" `
 --machine-type "e2-standard-2" `
 --image-type "UBUNTU" `
 --disk-type "pd-standard" `
